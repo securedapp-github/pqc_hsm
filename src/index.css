@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: oklch(var(--background));
+  --color-foreground: oklch(var(--foreground));
+  --color-card: oklch(var(--card));
+  --color-card-foreground: oklch(var(--card-foreground));
+  --color-primary: oklch(var(--primary));
+  --color-primary-foreground: oklch(var(--primary-foreground));
+  --color-muted: oklch(var(--muted));
+  --color-muted-foreground: oklch(var(--muted-foreground));
+  --color-border: oklch(var(--border));
+  --color-input: oklch(var(--input));
+  --font-geist: "Geist", "Inter", sans-serif;
+}
+
+:root {
+  /* Exact Scraped Values from securehsm.onhercules.app (Light Mode) */
+  --background: 0.98 0.003 264;      /* Off-white */
+  --foreground: 0.15 0.02 264;       /* Dark Slate */
+  --card: 1 0 0;                     /* White */
+  --card-foreground: 0.15 0.02 264;
+  
+  --primary: 0.45 0.18 264;          /* Vivid Blue */
+  --primary-foreground: 0.98 0 0;
+
+  --muted: 0.96 0.01 264;            /* Matches bg-muted/30 approx */
+  --muted-foreground: 0.40 0.02 264;
+
+  --border: 0.88 0.01 264;           /* Light Gray - Audited */
+  --input: 0.88 0.01 264;
+
+  --font-geist: 'Geist', 'Inter', sans-serif;
+  --grid-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] {
+  --background: 0.05 0 0;            /* Neutral pure black */
+  --foreground: 0.98 0 0;            /* Crisp white */
+  --card: 0.1 0 0;                  /* Dark card */
+  --card-foreground: 0.98 0 0;
+  --primary: 0.65 0.22 260;          /* Vibrant Blue */
+  --border: 0.3 0.02 264;            /* Dark Slate Border - Audited */
+  --muted: 0.1 0 0;
+  --muted-foreground: 0.65 0 0;
+  --grid-color: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme='navy'] {
+  --background: 0.08 0.04 260;       /* Deep Navy */
+  --foreground: 0.98 0.01 260;       /* Off-white */
+  --card: 0.12 0.04 260;             /* Navy Card */
+  --card-foreground: 0.98 0.01 260;
+  --primary: 0.6 0.18 250;
+  --border: 0.25 0.04 240;            /* Deep Navy Border - Audited */
+  --muted: 0.12 0.04 260;
+  --muted-foreground: 0.7 0.01 260;
+  --grid-color: rgba(255, 255, 255, 0.04);
+}
+
+body {
+  font-family: var(--font-geist);
+  background-color: oklch(var(--background)); /* Fallback/Base */
+  color: oklch(var(--foreground));
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+  /* Precision Grid Pattern from Live Site */
+  background-image: 
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
