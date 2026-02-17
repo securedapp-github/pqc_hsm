@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: 'Outfit', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Light Theme Variables */
+  --color-primary: 14 165 233;
+  /* Sky 500 */
+  --color-primary-dark: 2 132 199;
+  /* Sky 600 */
+  --color-secondary: 99 102 241;
+  /* Indigo 500 */
+  --color-accent: 6 182 212;
+  /* Cyan 500 */
+
+  --color-bg-main: 241 245 249;
+  /* Slate 100 */
+  --color-bg-card: 255 255 255;
+  --color-text-main: 15 23 42;
+  /* Slate 900 */
+  --color-text-muted: 100 116 139;
+  /* Slate 500 */
+
+  --shadow-color: 148 163 184;
+
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+
+  color-scheme: light;
+}
+
+html.dark {
+  /* Dark Theme Variables */
+  --color-primary: 56 189 248;
+  /* Sky 400 */
+  --color-primary-dark: 14 165 233;
+  /* Sky 500 */
+  --color-secondary: 129 140 248;
+  /* Indigo 400 */
+  --color-accent: 34 211 238;
+  /* Cyan 400 */
+
+  --color-bg-main: 15 23 42;
+  /* Slate 900 */
+  --color-bg-card: 30 41 59;
+  /* Slate 800 */
+  --color-text-main: 241 245 249;
+  /* Slate 100 */
+  --color-text-muted: 148 163 184;
+  /* Slate 400 */
+
+  --shadow-color: 2 6 23;
+
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: rgb(var(--color-bg-main));
+  color: rgb(var(--color-text-main));
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  background: rgb(var(--color-bg-card));
+  box-shadow: 0 10px 15px -3px rgba(var(--shadow-color), 0.1), 0 4px 6px -2px rgba(var(--shadow-color), 0.05);
+  border: 1px solid rgba(var(--color-primary), 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(var(--color-text-muted), 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(var(--color-text-muted), 0.5);
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .7;
+  }
+}
+
+/* Button Gradients */
+.btn-primary {
+  background: linear-gradient(135deg, rgb(var(--color-primary)) 0%, rgb(var(--color-secondary)) 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(var(--color-primary), 0.3);
+}
+
+.btn-primary:hover {
+  box-shadow: 0 10px 15px -3px rgba(var(--color-primary), 0.4);
+  transform: translateY(-1px);
+}
+
+input[type="checkbox"] {
+  accent-color: rgb(var(--color-primary));
+}

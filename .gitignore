@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Node.js
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Database
+backend/users.db
+*.db
+*.sqlite3
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+backend/cdss.log
+backend/cdss_audit.log
+
+# OS
+.DS_Store
+Thumbs.db
