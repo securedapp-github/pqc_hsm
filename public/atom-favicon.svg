@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <style> .stroke { fill: none; stroke: #3b82f6; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; } .dot { fill: #3b82f6 } </style>
+  </defs>
+  <g transform="translate(32,32)">
+    <ellipse class="stroke" rx="18" ry="6" transform="rotate(25)" />
+    <ellipse class="stroke" rx="18" ry="6" transform="rotate(-25)" />
+    <ellipse class="stroke" rx="18" ry="6" transform="rotate(90)" />
+    <circle class="dot" cx="0" cy="0" r="3.5" />
+    <circle class="dot" cx="-12" cy="-6" r="2.5" />
+    <circle class="dot" cx="12" cy="6" r="2.5" />
+  </g>
+</svg>
