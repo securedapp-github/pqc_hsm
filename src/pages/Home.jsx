@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import CTASection from '../components/CTASection';
 import SecurityModel from '../components/SecurityModel';
+import UseCases from '../components/UseCases';
 import CoreAPIs from '../components/CoreAPIs';
 import HybridCrypto from '../components/HybridCrypto';
 import Compliance from '../components/Compliance';
@@ -17,6 +18,7 @@ const Home = () => {
                 <Hero />
                 <CTASection type="mid" />
                 <SecurityModel />
+                <UseCases />
                 <CoreAPIs />
                 <HybridCrypto />
                 <Compliance />

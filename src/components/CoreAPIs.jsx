@@ -27,7 +27,7 @@ const CoreAPIs = () => {
     ];
 
     return (
-        <section id="apis" className="py-24 px-4 relative bg-slate-50/50 dark:bg-slate-950/50">
+        <section id="resources" className="py-24 px-4 relative bg-slate-50/50 dark:bg-slate-950/50">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
                     {apis.map((api, i) => (

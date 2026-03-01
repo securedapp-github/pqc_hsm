@@ -40,9 +40,13 @@ const Navbar = () => {
                             </a>
                         ))}
                         <ThemeToggle />
-                        <button className="text-white px-4 py-1.5 rounded-md font-bold text-sm hover:opacity-90 transition-all" style={{ backgroundColor: 'rgb(45, 81, 179)' }}>
+                        <a
+                            href="https://app.quantumvault.tech"
+                            className="text-white px-4 py-1.5 rounded-md font-bold text-sm hover:opacity-90 transition-all flex items-center justify-center"
+                            style={{ backgroundColor: 'rgb(45, 81, 179)' }}
+                        >
                             Get Started
-                        </button>
+                        </a>
                     </div>
 
                     <div className="md:hidden flex items-center space-x-4">
@@ -77,9 +81,12 @@ const Navbar = () => {
                                     </a>
                                 ))}
                                 <div className="px-4 py-4">
-                                    <button className="w-full bg-[#2563eb] text-white py-3 rounded-lg font-bold shadow-lg">
+                                    <a
+                                        href="https://app.quantumvault.tech"
+                                        className="w-full bg-[#2563eb] text-white py-3 rounded-lg font-bold shadow-lg flex items-center justify-center"
+                                    >
                                         Get Started
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>

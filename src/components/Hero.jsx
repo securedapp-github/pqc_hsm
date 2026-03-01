@@ -16,7 +16,7 @@ const Hero = () => {
                         className="inline-flex items-center space-x-2 glass px-4 py-2 rounded-full text-primary-indigo dark:text-cyan-400 text-xs font-bold uppercase tracking-widest mb-12 shadow-sm"
                     >
                         <ShieldCheck size={16} />
-                        <span>Post-Quantum Ready Infrastructure</span>
+                        <span>Post-Quantum Cryptography as a Service</span>
                     </motion.div>
 
                     <motion.h1
@@ -35,7 +35,7 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-14 max-w-2xl mx-auto font-medium"
                     >
-                        HSM-backed post-quantum cryptography APIs for key exchange, digital signatures, and key management. Protect your data against quantum threats.
+                        HSM-backed, NIST-aligned quantum-safe cryptography APIs for key exchange, digital signatures, and key management — built to protect your data against future quantum threats.
                     </motion.p>
 
                     <motion.div
@@ -45,11 +45,11 @@ const Hero = () => {
                         className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-14"
                     >
                         <button className="group w-full sm:w-auto text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:opacity-90 active:scale-95" style={{ backgroundColor: 'rgb(45, 81, 179)' }}>
-                            <span>Start Free Trial</span>
+                            <span>Start Free Developer Access</span>
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
                         <button className="w-full sm:w-auto text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:opacity-90 active:scale-95" style={{ backgroundColor: 'rgb(10, 132, 140)' }}>
-                            <span>View Documentation</span>
+                            <span>View Technical Documentation</span>
                         </button>
                     </motion.div>
 
@@ -60,8 +60,11 @@ const Hero = () => {
                         className="flex justify-center"
                     >
                         <p className="text-slate-600 dark:text-slate-400 font-medium text-sm">
-                            Free software-based APIs for development • No credit card required
-                        </p>
+                            Encrypted data harvested today can be decrypted tomorrow.
+                            <br />
+                            Prepare your infrastructure for the quantum era now.
+
+                        </p>    
                     </motion.div>
                 </div>
             </div>
