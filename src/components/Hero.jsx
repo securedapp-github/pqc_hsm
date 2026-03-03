@@ -44,11 +44,11 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 mb-14"
                     >
-                        <button className="group w-full sm:w-auto text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:opacity-90 active:scale-95" style={{ backgroundColor: 'rgb(45, 81, 179)' }}>
+                        <button className="group w-full sm:w-auto bg-brand-primary text-slate-950 px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:bg-brand-accent active:scale-95 shadow-lg shadow-brand-primary/20">
                             <span>Start Free Developer Access</span>
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
-                        <button className="w-full sm:w-auto text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:opacity-90 active:scale-95" style={{ backgroundColor: 'rgb(10, 132, 140)' }}>
+                        <button className="w-full sm:w-auto border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-900 active:scale-95">
                             <span>View Technical Documentation</span>
                         </button>
                     </motion.div>
@@ -64,7 +64,7 @@ const Hero = () => {
                             <br />
                             Prepare your infrastructure for the quantum era now.
 
-                        </p>    
+                        </p>
                     </motion.div>
                 </div>
             </div>

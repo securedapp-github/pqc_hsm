@@ -66,12 +66,12 @@ const UseCases = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] p-8 rounded-3xl glass border-slate-200/50 dark:border-slate-800/50 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/10 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 group"
+                            className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] p-8 rounded-3xl glass border-slate-200/50 dark:border-slate-800/50 shadow-xl shadow-brand-primary/5 hover:shadow-2xl hover:shadow-brand-primary/10 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 group"
                         >
-                            <div className={`w-14 h-14 ${useCase.bg} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                                <useCase.icon className={useCase.color} size={28} />
+                            <div className={`w-14 h-14 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                                <useCase.icon className="text-brand-accent dark:text-brand-primary" size={28} />
                             </div>
-                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-white group-hover:text-brand-accent dark:group-hover:text-brand-primary transition-colors">
                                 {useCase.title}
                             </h3>
                             <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">

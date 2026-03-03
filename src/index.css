@@ -5,9 +5,10 @@
 
 @theme {
   --font-sans: "Geist", "Inter", "system-ui", "-apple-system", "sans-serif";
-  --color-primary-blue: #2563eb;
-  --color-primary-indigo: #4f46e5;
-  --color-teal-accent: #0ea5e9;
+  --color-brand-primary: #14cf82;
+  --color-brand-accent: #059669;
+  --color-brand-dark: #064e3b;
+  --color-brand-gradient: linear-gradient(to right, var(--color-brand-primary), var(--color-brand-accent));
 
   --shadow-premium: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --shadow-glass: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -47,7 +48,7 @@ body {
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400 dark:from-blue-400 dark:via-indigo-300 dark:to-cyan-200;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-primary via-brand-accent to-brand-primary dark:from-brand-primary dark:via-brand-primary/80 dark:to-brand-accent;
   }
 
   .bg-mesh {

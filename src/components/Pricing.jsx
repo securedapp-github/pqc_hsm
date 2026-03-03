@@ -18,7 +18,7 @@ const Pricing = () => {
                 "HSM-backed security available only on paid plans"
             ],
             cta: "Start Free Trial",
-            color: "rgb(45, 81, 179)",
+            color: "var(--color-brand-primary)",
             highlight: false
         },
         {
@@ -34,7 +34,7 @@ const Pricing = () => {
                 "Email support"
             ],
             cta: "Get Started",
-            color: "rgb(10, 132, 140)",
+            color: "var(--color-brand-accent)",
             highlight: true
         },
         {
@@ -50,7 +50,7 @@ const Pricing = () => {
                 "Priority support"
             ],
             cta: "Contact Sales",
-            color: "rgb(45, 81, 179)",
+            color: "var(--color-brand-primary)",
             highlight: false
         }
     ];
@@ -81,7 +81,7 @@ const Pricing = () => {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
                             className={`flex flex-col p-10 rounded-xl border transition-all duration-300 ${plan.highlight
-                                ? 'bg-white dark:bg-slate-900/40 border-teal-500 ring-1 ring-teal-500/20'
+                                ? 'bg-white dark:bg-slate-900/40 border-brand-primary ring-1 ring-brand-primary/20'
                                 : 'bg-white dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 shadow-sm'
                                 }`}
                         >
@@ -102,8 +102,8 @@ const Pricing = () => {
                                 {plan.features.map((feature, idx) => (
                                     <li key={idx} className="flex items-start space-x-3 text-[13px] font-medium leading-relaxed">
                                         <div className="mt-0.5 flex-shrink-0">
-                                            <div className="rounded-full border border-teal-500/30 p-0.5">
-                                                <Check size={10} className="text-teal-500 dark:text-teal-400" />
+                                            <div className="rounded-full border border-brand-primary/30 p-0.5">
+                                                <Check size={10} className="text-brand-primary" />
                                             </div>
                                         </div>
                                         <span className="text-slate-600 dark:text-slate-300">{feature}</span>
@@ -112,7 +112,7 @@ const Pricing = () => {
                             </ul>
 
                             <button
-                                className="w-full py-3 rounded-lg font-bold text-white text-sm transition-all hover:opacity-90 active:scale-95 shadow-lg"
+                                className="w-full py-3 rounded-lg font-bold text-slate-950 text-sm transition-all hover:bg-brand-primary active:scale-95 shadow-lg"
                                 style={{ backgroundColor: plan.color }}
                             >
                                 {plan.cta}

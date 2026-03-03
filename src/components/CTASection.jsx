@@ -4,18 +4,18 @@ import { ArrowRight, Calendar, ChevronDown } from 'lucide-react';
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
     return (
-        <div className="border-b border-blue-200 dark:border-blue-800/50 last:border-0">
+        <div className="border-b border-brand-primary/10 dark:border-brand-primary/5 last:border-0">
             <button
                 className="w-full py-6 flex items-center justify-between text-left group transition-all"
                 onClick={onClick}
             >
-                <span className="text-lg md:text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <span className="text-lg md:text-xl font-bold text-slate-900 dark:text-white group-hover:text-brand-accent dark:group-hover:text-brand-primary transition-colors">
                     {question}
                 </span>
                 <motion.div
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
-                    className="flex-shrink-0 ml-4 text-blue-600 dark:text-blue-400"
+                    className="flex-shrink-0 ml-4 text-brand-accent dark:text-brand-primary"
                 >
                     <ChevronDown size={24} />
                 </motion.div>
@@ -97,7 +97,7 @@ const CTASection = ({ type }) => {
                                 Attackers are already harvesting encrypted data to decrypt later when quantum computers mature.
                             </p>
                             <div className="mb-8 flex-grow">
-                                <p className="font-semibold text-blue-700 dark:text-blue-400 mb-3 text-sm uppercase tracking-wider">QuantumVault enables:</p>
+                                <p className="font-semibold text-brand-accent dark:text-brand-primary mb-3 text-sm uppercase tracking-wider">QuantumVault enables:</p>
                                 <ul className="space-y-3 text-slate-600 dark:text-slate-400">
                                     {[
                                         'Quantum-safe TLS',
@@ -112,7 +112,7 @@ const CTASection = ({ type }) => {
                                     ))}
                                 </ul>
                             </div>
-                            <p className="font-bold text-slate-900 dark:text-white pt-4 border-t border-blue-200/50 dark:border-blue-700/30">
+                            <p className="font-bold text-slate-900 dark:text-white pt-4 border-t border-brand-primary/10 dark:border-brand-primary/5">
                                 Future-proof your security architecture today.
                             </p>
                         </motion.div>
@@ -132,7 +132,7 @@ const CTASection = ({ type }) => {
                                 Post-Quantum Cryptography (PQC) refers to cryptographic algorithms designed to resist attacks from quantum computers.
                             </p>
                             <div className="mb-8 flex-grow">
-                                <p className="font-semibold text-blue-700 dark:text-blue-400 mb-3 text-sm uppercase tracking-wider">QuantumVault implements:</p>
+                                <p className="font-semibold text-brand-accent dark:text-brand-primary mb-3 text-sm uppercase tracking-wider">QuantumVault implements:</p>
                                 <ul className="space-y-3 text-slate-600 dark:text-slate-400">
                                     {[
                                         'ML-KEM (Key Encapsulation Mechanism)',
@@ -146,7 +146,7 @@ const CTASection = ({ type }) => {
                                     ))}
                                 </ul>
                             </div>
-                            <p className="font-medium text-slate-600 dark:text-slate-400 pt-4 border-t border-blue-200/50 dark:border-blue-700/30">
+                            <p className="font-medium text-slate-600 dark:text-slate-400 pt-4 border-t border-brand-primary/10 dark:border-brand-primary/5">
                                 Fully aligned with <span className="text-slate-900 dark:text-white font-bold">NIST SP 800-208</span> and <span className="text-slate-900 dark:text-white font-bold">FIPS 140-3</span> standards.
                             </p>
                         </motion.div>
@@ -177,7 +177,7 @@ const CTASection = ({ type }) => {
                     initial={{ opacity: 0, scale: 0.98 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="bg-white dark:bg-slate-900/40 rounded-3xl p-4 md:p-8 shadow-xl shadow-blue-500/5 border border-blue-100 dark:border-blue-900/30"
+                    className="bg-white dark:bg-slate-900/40 rounded-3xl p-4 md:p-8 shadow-xl shadow-brand-primary/5 border border-brand-primary/10 dark:border-brand-primary/5"
                 >
                     {faqData.map((item, index) => (
                         <FAQItem
@@ -194,18 +194,18 @@ const CTASection = ({ type }) => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="mt-16 rounded-[1rem] p-10 md:p-16 text-center bg-blue-100 dark:bg-blue-900/30 transition-colors duration-300"
+                    className="mt-16 rounded-[1rem] p-10 md:p-16 text-center bg-brand-primary/10 dark:bg-brand-primary/5 transition-colors duration-300"
                 >
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">Ready to Secure Your Future?</h3>
                     <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
                         Start developing with post-quantum cryptography today. Free software-based APIs, no credit card required.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <button className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-white flex items-center justify-center space-x-2 transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-blue-600/20" style={{ backgroundColor: 'rgb(45, 81, 179)' }}>
+                        <button className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center space-x-2 transition-all hover:bg-brand-primary active:scale-95 shadow-lg shadow-brand-primary/20" style={{ backgroundColor: 'var(--color-brand-primary)' }}>
                             <span>Start Free Trial</span>
                             <ArrowRight size={18} />
                         </button>
-                        <button className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-white flex items-center justify-center transition-all hover:opacity-90 active:scale-95 shadow-lg shadow-teal-600/20" style={{ backgroundColor: 'rgb(10, 132, 140)' }}>
+                        <button className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center transition-all hover:bg-brand-accent active:scale-95 shadow-lg shadow-brand-accent/20" style={{ backgroundColor: 'var(--color-brand-accent)' }}>
                             <span>View Documentation</span>
                         </button>
                     </div>

@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Shield, Atom } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
+import { useTheme } from '../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
+    const { theme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -16,17 +18,18 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled
+                ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-md border-slate-200 dark:border-slate-700/60'
+                : 'bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm border-slate-200/50 dark:border-slate-700/30'
             }`}>
             <div className="max-w-9xl mx-auto px-10">
                 <div className="flex justify-between items-center h-16">
-                    <a href="#home" className="flex items-center space-x-3 group cursor-pointer">
-                        <div className="relative">
-                            <Atom className="text-[#3b82f6] dark:text-teal-accent" size={28} />
-                        </div>
-                        <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-                            QuantumVault
-                        </span>
+                    <a href="#home" className="flex items-center group cursor-pointer">
+                        <img
+                            src={theme === 'dark' ? '/img/3.png' : '/img/4.png'}
+                            alt="QuantumVault Logo"
+                            className="h-40 w-auto object-contain"
+                        />
                     </a>
 
                     <div className="hidden md:flex items-center space-x-8">
@@ -42,8 +45,7 @@ const Navbar = () => {
                         <ThemeToggle />
                         <a
                             href="https://app.quantumvault.tech"
-                            className="text-white px-4 py-1.5 rounded-md font-bold text-sm hover:opacity-90 transition-all flex items-center justify-center"
-                            style={{ backgroundColor: 'rgb(45, 81, 179)' }}
+                            className="bg-brand-primary text-slate-950 px-4 py-1.5 rounded-md font-bold text-sm hover:bg-brand-accent transition-all flex items-center justify-center"
                         >
                             Get Started
                         </a>

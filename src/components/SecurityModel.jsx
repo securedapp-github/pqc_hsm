@@ -115,13 +115,13 @@ const SecurityModel = () => {
                                     zIndex: isExpanded ? 10 : 1
                                 }}
                                 className={`glass rounded-[2rem] p-8 transition-all duration-500 group relative flex flex-col ${isExpanded
-                                    ? 'bg-white dark:bg-slate-900 border-blue-200 dark:border-blue-900/50 shadow-2xl shadow-blue-500/10'
+                                    ? 'bg-white dark:bg-slate-900 border-brand-primary/30 dark:border-brand-primary/20 shadow-2xl shadow-brand-primary/10'
                                     : 'hover:bg-white/50 dark:hover:bg-slate-900/50'
                                     }`}
                             >
                                 <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 ${isExpanded
-                                    ? 'bg-blue-600 border-blue-500 text-white shadow-lg shadow-blue-500/20'
-                                    : 'bg-blue-50 dark:bg-slate-800 border-blue-100 dark:border-slate-700 group-hover:bg-blue-600 text-blue-600 group-hover:text-white'
+                                    ? 'bg-brand-primary border-brand-accent text-slate-950 shadow-lg shadow-brand-primary/20'
+                                    : 'bg-brand-primary/5 dark:bg-brand-primary/10 border-brand-primary/10 dark:border-brand-primary/5 group-hover:bg-brand-primary text-brand-accent group-hover:text-slate-950'
                                     }`}>
                                     <f.icon size={28} />
                                 </div>
@@ -148,7 +148,7 @@ const SecurityModel = () => {
                                                         transition={{ delay: idx * 0.1 }}
                                                         className="flex gap-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed"
                                                     >
-                                                        <div className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0 mt-2" />
+                                                        <div className="w-1.5 h-1.5 rounded-full bg-brand-primary shrink-0 mt-2" />
                                                         {detail}
                                                     </motion.li>
                                                 ))}
@@ -160,8 +160,8 @@ const SecurityModel = () => {
                                 <button
                                     onClick={() => setExpandedIndex(isExpanded ? null : i)}
                                     className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${isExpanded
-                                        ? 'text-blue-600 dark:text-blue-400'
-                                        : 'text-slate-400 hover:text-blue-600 dark:hover:text-blue-400'
+                                        ? 'text-brand-accent dark:text-brand-primary'
+                                        : 'text-slate-400 hover:text-brand-accent dark:hover:text-brand-primary'
                                         }`}
                                 >
                                     {isExpanded ? (

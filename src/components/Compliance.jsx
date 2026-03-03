@@ -51,8 +51,8 @@ const Compliance = () => {
                             transition={{ delay: i * 0.1 }}
                             className="glass rounded-3xl p-10 flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
                         >
-                            <div className="w-20 h-20 rounded-full bg-blue-600/5 dark:bg-blue-400/5 flex items-center justify-center mb-8 border border-blue-100 dark:border-blue-900/30 group-hover:scale-110 transition-transform duration-500">
-                                <item.icon className="text-blue-600 dark:text-blue-400" size={32} />
+                            <div className="w-20 h-20 rounded-full bg-brand-primary/10 dark:bg-brand-primary/5 flex items-center justify-center mb-8 border border-brand-primary/20 dark:border-brand-primary/10 group-hover:scale-110 transition-transform duration-500">
+                                <item.icon className="text-brand-accent dark:text-brand-primary" size={32} />
                             </div>
                             <h3 className="text-xl font-bold text-balance leading-tight mb-4 tracking-tight">{item.title}</h3>
                             <p className="text-slate-500 dark:text-slate-400 font-medium text-sm leading-relaxed">

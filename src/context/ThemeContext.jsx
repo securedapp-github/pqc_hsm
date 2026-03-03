@@ -3,13 +3,14 @@ import React, { createContext, useContext, useEffect, useState } from 'react';
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState(
-        localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-    );
+    const [theme, setTheme] = useState(() => {
+        const saved = localStorage.getItem('theme');
+        if (saved) return saved;
+        return 'dark';
+    });
 
     useEffect(() => {
         const root = window.document.documentElement;
-        console.log('Theme changed to:', theme);
         if (theme === 'dark') {
             root.classList.add('dark');
             root.style.colorScheme = 'dark';
