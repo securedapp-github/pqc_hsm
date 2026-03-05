@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Linkedin, X, Github, Mail } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import ContactModal from './ContactModal';
@@ -14,14 +15,14 @@ const Footer = () => {
                     {/* Brand Section */}
                     {/* ... (previous branding code) */}
                     <div className="col-span-2 lg:col-span-7 text-left">
-                        <a href="#home" className="flex items-center space-x-3 mb-4 group cursor-pointer">
+                        <Link to="/" className="flex items-center space-x-3 mb-4 group cursor-pointer">
                             <img
                                 src={theme === 'dark' ? "img/2.png" : "img/1.png"}
                                 alt="QuantumVault Logo"
                                 className="h-8 w-auto object-contain transition-all duration-300"
                             />
                             <span className="text-xl font-bold tracking-tight">QuantumVault</span>
-                        </a>
+                        </Link>
                         <p className="text-slate-500 text-sm max-w-xs leading-relaxed">
                             Post-quantum cryptography as a service. Built for the quantum era.
                         </p>
@@ -70,13 +71,12 @@ const Footer = () => {
                     {/* Product */}
                     <div className="col-span-1 lg:col-span-1.5 text-sm">
                         <h4 className="font-bold text-slate-900 dark:text-white mb-4">
-                            <a href="#features" className="hover:text-brand-accent transition-colors">Product</a>
+                            <a href="/#features" className="hover:text-brand-accent transition-colors">Product</a>
                         </h4>
                         <ul className="space-y-2.5 text-slate-500 text-[13px]">
-                            <li><a href="#features" className="hover:text-brand-accent transition-colors">Features</a></li>
-                            <li><a href="#resources" className="hover:text-brand-accent transition-colors">PQC APIs</a></li>
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">Managed Key Services</a></li>
-                            <li><a href="#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
+                            <li><a href="/#features" className="hover:text-brand-accent transition-colors">Features</a></li>
+                            <li><a href="/#resources" className="hover:text-brand-accent transition-colors">PQC APIs</a></li>
+                            <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
                             <li><a href="#" className="hover:text-brand-accent transition-colors">Documentation</a></li>
                         </ul>
                     </div>
@@ -84,26 +84,26 @@ const Footer = () => {
                     {/* Solutions */}
                     <div className="col-span-1 lg:col-span-1.5 text-sm">
                         <h4 className="font-bold text-slate-900 dark:text-white mb-4">
-                            <a href="#solutions" className="hover:text-brand-accent transition-colors">Solutions</a>
+                            <a href="/#solutions" className="hover:text-brand-accent transition-colors">Solutions</a>
                         </h4>
                         <ul className="space-y-2.5 text-slate-500 text-[13px]">
-                            <li><a href="#solutions" className="hover:text-brand-accent transition-colors">Financial Services</a></li>
-                            <li><a href="#solutions" className="hover:text-brand-accent transition-colors">Healthcare</a></li>
-                            <li><a href="#solutions" className="hover:text-brand-accent transition-colors">Government</a></li>
-                            <li><a href="#solutions" className="hover:text-brand-accent transition-colors">Cloud & SaaS</a></li>
+                            <li><a href="/#solutions" className="hover:text-brand-accent transition-colors">Financial Services</a></li>
+                            <li><a href="/#solutions" className="hover:text-brand-accent transition-colors">Healthcare</a></li>
+                            <li><a href="/#solutions" className="hover:text-brand-accent transition-colors">Government</a></li>
+                            <li><a href="/#solutions" className="hover:text-brand-accent transition-colors">Cloud & SaaS</a></li>
                         </ul>
                     </div>
 
                     {/* Resources */}
                     <div className="col-span-1 lg:col-span-1.5 text-sm">
                         <h4 className="font-bold text-slate-900 dark:text-white mb-4">
-                            <a href="#resources" className="hover:text-brand-accent transition-colors">Resources</a>
+                            <a href="/#resources" className="hover:text-brand-accent transition-colors">Resources</a>
                         </h4>
                         <ul className="space-y-2.5 text-slate-500 text-[13px]">
                             <li><a href="#" className="hover:text-brand-accent transition-colors">Blog</a></li>
-                            <li><a href="#features" className="hover:text-brand-accent transition-colors">Security Architecture</a></li>
-                            <li><a href="#compliance" className="hover:text-brand-accent transition-colors">Compliance</a></li>
-                            <li><a href="#faq" className="hover:text-brand-accent transition-colors">FAQ</a></li>
+                            <li><a href="/#features" className="hover:text-brand-accent transition-colors">Security Architecture</a></li>
+                            <li><a href="/#compliance" className="hover:text-brand-accent transition-colors">Compliance</a></li>
+                            <li><a href="/#faq" className="hover:text-brand-accent transition-colors">FAQ</a></li>
                         </ul>
                     </div>
 
@@ -111,7 +111,7 @@ const Footer = () => {
                     <div className="col-span-1 lg:col-span-1 text-sm">
                         <h4 className="font-bold text-slate-900 dark:text-white mb-4">Company</h4>
                         <ul className="space-y-2.5 text-slate-500 text-[13px]">
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">About</a></li>
+                            <li><Link to="/about" className="hover:text-brand-accent transition-colors">About</Link></li>
                             <li>
                                 <button
                                     onClick={() => setIsContactModalOpen(true)}
@@ -120,7 +120,7 @@ const Footer = () => {
                                     Contact
                                 </button>
                             </li>
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">Careers</a></li>
+                            <li><Link to="/careers" className="hover:text-brand-accent transition-colors">Careers</Link></li>
                         </ul>
                     </div>
 

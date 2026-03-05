@@ -35,7 +35,7 @@ const Hero = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-14 max-w-2xl mx-auto font-medium"
                     >
-                        HSM-backed, NIST-aligned quantum-safe cryptography APIs for key exchange, digital signatures, and key management — built to protect your data against future quantum threats.
+                        HSM-backed, NIST-aligned quantum-safe cryptography APIs for key exchange, digital signatures, and key management built to protect your data against future quantum threats.
                     </motion.p>
 
                     <motion.div

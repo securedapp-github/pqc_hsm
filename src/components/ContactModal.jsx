@@ -44,7 +44,11 @@ const ContactModal = ({ isOpen, onClose }) => {
             subscribeUpdates: formData.subscribeUpdates,
         };
         try {
-            const response = await fetch('/api-proxy/api/public/project-inquiry', {
+            const apiUrl = import.meta.env.DEV
+                ? '/api-proxy/api/public/project-inquiry'
+                : 'https://crm-be.securedapp.io/api/public/project-inquiry';
+
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

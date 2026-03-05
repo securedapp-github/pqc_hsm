@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '../context/ThemeContext';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -19,24 +20,24 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled
-                ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-md border-slate-200 dark:border-slate-700/60'
-                : 'bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm border-slate-200/50 dark:border-slate-700/30'
+            ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-md border-slate-200 dark:border-slate-700/60'
+            : 'bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm border-slate-200/50 dark:border-slate-700/30'
             }`}>
             <div className="max-w-9xl mx-auto px-10">
                 <div className="flex justify-between items-center h-16">
-                    <a href="#home" className="flex items-center group cursor-pointer">
+                    <Link to="/" className="flex items-center group cursor-pointer">
                         <img
                             src={theme === 'dark' ? '/img/3.png' : '/img/4.png'}
                             alt="QuantumVault Logo"
                             className="h-40 w-auto object-contain"
                         />
-                    </a>
+                    </Link>
 
                     <div className="hidden md:flex items-center space-x-8">
                         {['Features', 'Pricing', 'Compliance'].map((item) => (
                             <a
                                 key={item}
-                                href={`#${item.toLowerCase()}`}
+                                href={`/#${item.toLowerCase()}`}
                                 className="text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
                             >
                                 {item}
@@ -75,7 +76,7 @@ const Navbar = () => {
                                 {['Features', 'Pricing', 'Compliance'].map((item) => (
                                     <a
                                         key={item}
-                                        href={`#${item.toLowerCase()}`}
+                                        href={`/#${item.toLowerCase()}`}
                                         className="block px-4 py-3 text-base font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900"
                                         onClick={() => setIsOpen(false)}
                                     >
