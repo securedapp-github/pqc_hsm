@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/contact",
+            "destination": "https://crm-be.securedapp.io/api/public/project-inquiry"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
