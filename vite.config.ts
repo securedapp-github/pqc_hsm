@@ -7,11 +7,11 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
     proxy: {
-      '/api-proxy': {
+      '/api/contact': {
         target: 'https://crm-be.securedapp.io',
         changeOrigin: true,
         secure: true,
-        rewrite: (path: string) => path.replace(/^\/api-proxy/, ''),
+        rewrite: (path: string) => path.replace(/^\/api\/contact/, '/api/public/project-inquiry'),
       },
     },
   },
