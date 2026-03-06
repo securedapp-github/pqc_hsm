@@ -42,14 +42,14 @@ const UseCases = () => {
     ];
 
     return (
-        <section id="solutions" className="py-24 px-4 bg-slate-50 dark:bg-slate-950">
+        <section id="solutions" className="py-20 md:py-24 px-4 bg-slate-50 dark:bg-slate-950">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900 dark:text-white"
+                        className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900 dark:text-white"
                     >
                         Industry <span className="text-gradient">Use Cases</span>
                     </motion.h2>

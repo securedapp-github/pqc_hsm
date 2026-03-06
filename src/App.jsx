@@ -4,6 +4,7 @@ import { ThemeProvider } from './context/ThemeContext';
 import Home from './pages/Home';
 import About from './pages/About';
 import Careers from './pages/Careers';
+import Documentation from './pages/Documentation';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/documentation" element={<Documentation />} />
         </Routes>
       </Router>
     </ThemeProvider>

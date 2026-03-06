@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import ThemeToggle from './ThemeToggle';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import ThemeToggle from './ThemeToggle';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const { theme } = useTheme();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -18,6 +20,7 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+
     return (
         <nav className={`fixed w-full z-50 transition-all duration-300 border-b ${scrolled
             ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-md border-slate-200 dark:border-slate-700/60'
@@ -25,7 +28,15 @@ const Navbar = () => {
             }`}>
             <div className="max-w-9xl mx-auto px-10">
                 <div className="flex justify-between items-center h-16">
-                    <Link to="/" className="flex items-center group cursor-pointer">
+                    <Link
+                        to="/"
+                        onClick={() => {
+                            if (location.pathname === '/') {
+                                window.scrollTo({ top: 0, behavior: 'smooth' });
+                            }
+                        }}
+                        className="flex items-center group cursor-pointer"
+                    >
                         <img
                             src={theme === 'dark' ? '/img/3.png' : '/img/4.png'}
                             alt="QuantumVault Logo"
@@ -77,7 +88,7 @@ const Navbar = () => {
                                     <a
                                         key={item}
                                         href={`/#${item.toLowerCase()}`}
-                                        className="block px-4 py-3 text-base font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900"
+                                        className="block px-6 py-4 text-lg font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-4 border-transparent hover:border-brand-primary transition-all"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {item}
@@ -86,7 +97,7 @@ const Navbar = () => {
                                 <div className="px-4 py-4">
                                     <a
                                         href="https://app.quantumvault.tech"
-                                        className="w-full bg-[#2563eb] text-white py-3 rounded-lg font-bold shadow-lg flex items-center justify-center"
+                                        className="w-full bg-brand-primary text-slate-950 py-3 rounded-lg font-bold shadow-lg flex items-center justify-center hover:bg-brand-accent transition-all"
                                     >
                                         Get Started
                                     </a>

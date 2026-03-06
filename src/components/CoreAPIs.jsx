@@ -27,7 +27,7 @@ const CoreAPIs = () => {
     ];
 
     return (
-        <section id="resources" className="py-24 px-4 relative bg-slate-50/50 dark:bg-slate-950/50">
+        <section id="resources" className="py-20 md:py-24 px-4 relative bg-slate-50/50 dark:bg-slate-950/50">
             <div className="max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-8 mb-16">
                     {apis.map((api, i) => (
@@ -39,11 +39,11 @@ const CoreAPIs = () => {
                             transition={{ delay: i * 0.1 }}
                             className="bg-white dark:bg-slate-900/40 rounded-[2rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300"
                         >
-                            <div className="flex items-center space-x-4 mb-4">
-                                <api.icon className="text-brand-accent dark:text-brand-primary" size={32} />
+                            <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 mb-4 text-center md:text-left">
+                                <api.icon className="text-brand-accent dark:text-brand-primary mb-4 md:mb-0" size={32} />
                                 <h3 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">{api.title}</h3>
                             </div>
-                            <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium">
+                            <p className="text-slate-500 dark:text-slate-400 mb-10 font-medium text-center md:text-left">
                                 {api.desc}
                             </p>
                             <ul className="space-y-5">

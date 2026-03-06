@@ -9,12 +9,11 @@ const Footer = () => {
     const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     return (
-        <footer className="bg-slate-100 dark:bg-slate-900/40 pt-16 pb-12 px-4 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
-            <div className="max-w-9xl mx-auto px-20">
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-10 mb-12">
+        <footer className="bg-slate-100 dark:bg-slate-900/40 pt-16 pb-12 px-6 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
+            <div className="max-w-9xl mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-10 mb-12">
                     {/* Brand Section */}
-                    {/* ... (previous branding code) */}
-                    <div className="col-span-2 lg:col-span-7 text-left">
+                    <div className="col-span-1 sm:col-span-2 lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left">
                         <Link to="/" className="flex items-center space-x-3 mb-4 group cursor-pointer">
                             <img
                                 src={theme === 'dark' ? "img/2.png" : "img/1.png"}
@@ -77,7 +76,7 @@ const Footer = () => {
                             <li><a href="/#features" className="hover:text-brand-accent transition-colors">Features</a></li>
                             <li><a href="/#resources" className="hover:text-brand-accent transition-colors">PQC APIs</a></li>
                             <li><a href="/#pricing" className="hover:text-brand-accent transition-colors">Pricing</a></li>
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">Documentation</a></li>
+                            <li><Link to="/documentation" className="hover:text-brand-accent transition-colors">Documentation</Link></li>
                         </ul>
                     </div>
 

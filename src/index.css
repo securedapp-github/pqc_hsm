@@ -21,6 +21,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 5rem;
+}
+
 :root {
   font-family: var(--font-sans);
   line-height: 1.5;

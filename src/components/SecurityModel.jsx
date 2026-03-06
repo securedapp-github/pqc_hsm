@@ -74,7 +74,7 @@ const SecurityModel = () => {
     ];
 
     return (
-        <section id="features" className="py-32 px-4 relative overflow-hidden">
+        <section id="features" className="py-20 md:py-32 px-4 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-24">
                     <motion.h2
@@ -119,15 +119,15 @@ const SecurityModel = () => {
                                     : 'hover:bg-white/50 dark:hover:bg-slate-900/50'
                                     }`}
                             >
-                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 ${isExpanded
+                                <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 border transition-all duration-500 mx-auto md:mx-0 ${isExpanded
                                     ? 'bg-brand-primary border-brand-accent text-slate-950 shadow-lg shadow-brand-primary/20'
                                     : 'bg-brand-primary/5 dark:bg-brand-primary/10 border-brand-primary/10 dark:border-brand-primary/5 group-hover:bg-brand-primary text-brand-accent group-hover:text-slate-950'
                                     }`}>
                                     <f.icon size={28} />
                                 </div>
 
-                                <h3 className="text-xl font-bold mb-4 tracking-tight">{f.title}</h3>
-                                <p className="text-slate-500 dark:text-slate-400 font-leading-relaxed text-sm mb-4">
+                                <h3 className="text-xl font-bold mb-4 tracking-tight text-center md:text-left">{f.title}</h3>
+                                <p className="text-slate-500 dark:text-slate-400 font-leading-relaxed text-sm mb-4 text-center md:text-left">
                                     {f.desc}
                                 </p>
 
@@ -159,7 +159,7 @@ const SecurityModel = () => {
 
                                 <button
                                     onClick={() => setExpandedIndex(isExpanded ? null : i)}
-                                    className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${isExpanded
+                                    className={`flex items-center justify-center md:justify-start gap-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${isExpanded
                                         ? 'text-brand-accent dark:text-brand-primary'
                                         : 'text-slate-400 hover:text-brand-accent dark:hover:text-brand-primary'
                                         }`}

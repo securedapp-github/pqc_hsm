@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Zap, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
     return (
@@ -23,7 +24,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-6xl md:text-7xl font-bold text-balance leading-tight text-slate-900 dark:text-white"
+                        className="text-4xl sm:text-6xl md:text-7xl font-bold text-balance leading-tight text-slate-900 dark:text-white"
                     >
                         Quantum-Safe Security <br />
                         <span className="text-gradient">Built for Tomorrow</span>
@@ -33,9 +34,9 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-xl md:text-2xl text-slate-500 dark:text-slate-400 mb-14 max-w-2xl mx-auto font-medium"
+                        className="text-lg md:text-2xl text-slate-500 dark:text-slate-400 mb-14 max-w-2xl mx-auto font-medium"
                     >
-                        HSM-backed, NIST-aligned quantum-safe cryptography APIs for key exchange, digital signatures, and key management built to protect your data against future quantum threats.
+                        HSM-backed, NIST-aligned quantum-safe cryptography APIs built to protect your data against future quantum threats.
                     </motion.p>
 
                     <motion.div
@@ -48,9 +49,12 @@ const Hero = () => {
                             <span>Start Free Developer Access</span>
                             <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                         </button>
-                        <button className="w-full sm:w-auto border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-900 active:scale-95">
+                        <Link
+                            to="/documentation"
+                            className="w-full sm:w-auto border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white px-8 py-4 rounded-lg font-bold flex items-center justify-center space-x-2 transition-all duration-300 hover:bg-slate-50 dark:hover:bg-slate-900 active:scale-95"
+                        >
                             <span>View Technical Documentation</span>
-                        </button>
+                        </Link>
                     </motion.div>
 
                     <motion.div

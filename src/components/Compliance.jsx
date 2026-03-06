@@ -22,14 +22,14 @@ const Compliance = () => {
     ];
 
     return (
-        <section id="compliance" className="py-32 px-4 relative">
+        <section id="compliance" className="py-20 md:py-32 px-4 relative">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-24">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight"
+                        className="text-4xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight text-center"
                     >
                         Compliance <span className="text-gradient">& Audit</span>
                     </motion.h2>
