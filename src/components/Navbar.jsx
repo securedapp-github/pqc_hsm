@@ -45,7 +45,7 @@ const Navbar = () => {
                     </Link>
 
                     <div className="hidden md:flex items-center space-x-8">
-                        {['Features', 'Pricing', 'Compliance'].map((item) => (
+                        {['Features', 'Pricing', 'Compliance', 'Contact'].map((item) => (
                             <a
                                 key={item}
                                 href={`/#${item.toLowerCase()}`}
@@ -84,7 +84,7 @@ const Navbar = () => {
                             className="md:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden"
                         >
                             <div className="py-4 space-y-1">
-                                {['Features', 'Pricing', 'Compliance'].map((item) => (
+                                {['Features', 'Pricing', 'Compliance', 'Contact'].map((item) => (
                                     <a
                                         key={item}
                                         href={`/#${item.toLowerCase()}`}

@@ -8,6 +8,7 @@ import CoreAPIs from '../components/CoreAPIs';
 import HybridCrypto from '../components/HybridCrypto';
 import Compliance from '../components/Compliance';
 import Pricing from '../components/Pricing';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Home = () => {
@@ -24,6 +25,7 @@ const Home = () => {
                 <Compliance />
                 <Pricing />
                 <CTASection type="final" />
+                <Contact />
             </main>
             <Footer />
         </div>

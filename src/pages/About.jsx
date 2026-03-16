@@ -19,7 +19,7 @@ const About = () => {
                             transition={{ duration: 0.6 }}
                             className="text-5xl md:text-7xl font-bold text-balance leading-tight text-slate-900 dark:text-white mb-6 tracking-tight"
                         >
-                            About QuantumVault
+                            About <span className="text-gradient">QuantumVault</span>
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0, y: 20 }}
@@ -67,12 +67,12 @@ const About = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="max-w-5xl mx-auto"
+                        className="max-w-5xl mx-auto text-center"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight text-center md:text-left">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight text-center">
                             Creating a Future-Ready Security Infrastructure
                         </h2>
-                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-12 text-center md:text-left">
+                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-12 text-center">
                             At QuantumVault, we approach security as infrastructure not as a feature.
                         </p>
 
@@ -174,7 +174,7 @@ const About = () => {
                         viewport={{ once: true }}
                         className="max-w-4xl mx-auto"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight text-center md:text-left">
+                        <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight text-center">
                             Our Team
                         </h2>
                         <div className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed space-y-6 glass rounded-[2rem] p-8 md:p-12 border border-slate-200 dark:border-brand-primary/10 shadow-sm">

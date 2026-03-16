@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Linkedin, X, Github, Mail } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
-import ContactModal from './ContactModal';
 
 const Footer = () => {
     const { theme } = useTheme();
-    const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
     return (
         <footer className="bg-slate-100 dark:bg-slate-900/40 pt-16 pb-12 px-6 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
@@ -112,12 +110,12 @@ const Footer = () => {
                         <ul className="space-y-2.5 text-slate-500 text-[13px]">
                             <li><Link to="/about" className="hover:text-brand-accent transition-colors">About</Link></li>
                             <li>
-                                <button
-                                    onClick={() => setIsContactModalOpen(true)}
+                                <a
+                                    href="/#contact"
                                     className="hover:text-brand-accent transition-colors cursor-pointer outline-none"
                                 >
                                     Contact
-                                </button>
+                                </a>
                             </li>
                             <li><Link to="/careers" className="hover:text-brand-accent transition-colors">Careers</Link></li>
                         </ul>
@@ -127,9 +125,9 @@ const Footer = () => {
                     <div className="col-span-1 lg:col-span-1.5 text-sm">
                         <h4 className="font-bold text-slate-900 dark:text-white mb-4">Legal</h4>
                         <ul className="space-y-2.5 text-slate-500 text-[13px]">
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">Terms of Service</a></li>
-                            <li><a href="#" className="hover:text-brand-accent transition-colors">Security Policy</a></li>
+                            <li><Link to="/privacy-policy" className="hover:text-brand-accent transition-colors">Privacy Policy</Link></li>
+                            <li><Link to="/terms-of-service" className="hover:text-brand-accent transition-colors">Terms of Service</Link></li>
+                            <li><Link to="/security-policy" className="hover:text-brand-accent transition-colors">Security Policy</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -140,11 +138,6 @@ const Footer = () => {
                     </p>
                 </div>
             </div>
-
-            <ContactModal
-                isOpen={isContactModalOpen}
-                onClose={() => setIsContactModalOpen(false)}
-            />
         </footer>
     );
 };

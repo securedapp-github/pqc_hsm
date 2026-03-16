@@ -205,9 +205,9 @@ const CTASection = ({ type }) => {
                             <span>Start Free Trial</span>
                             <ArrowRight size={18} />
                         </button>
-                        <button className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center transition-all hover:bg-brand-accent active:scale-95 shadow-lg shadow-brand-accent/20" style={{ backgroundColor: 'var(--color-brand-accent)' }}>
-                            <span>View Documentation</span>
-                        </button>
+                        <a href="#contact" className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center transition-all hover:bg-brand-accent active:scale-95 shadow-lg shadow-brand-accent/20" style={{ backgroundColor: 'var(--color-brand-accent)' }}>
+                            <span>Schedule a Demo</span>
+                        </a>
                     </div>
                 </motion.div>
             </div>
