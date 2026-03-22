@@ -18,6 +18,7 @@ const Pricing = () => {
                 "HSM-backed security available only on paid plans"
             ],
             cta: "Start Free Trial",
+            link: "https://app.quantumvault.tech",
             color: "var(--color-brand-primary)",
             highlight: false
         },
@@ -34,6 +35,7 @@ const Pricing = () => {
                 "Email support"
             ],
             cta: "Get Started",
+            link: "https://app.quantumvault.tech",
             color: "var(--color-brand-accent)",
             highlight: true
         },
@@ -50,6 +52,7 @@ const Pricing = () => {
                 "Priority support"
             ],
             cta: "Contact Sales",
+            link: "/#contact",
             color: "var(--color-brand-primary)",
             highlight: false
         }
@@ -111,12 +114,13 @@ const Pricing = () => {
                                 ))}
                             </ul>
 
-                            <button
-                                className="w-full py-3 rounded-lg font-bold text-slate-950 text-sm transition-all hover:bg-brand-primary active:scale-95 shadow-lg"
+                            <a
+                                href={plan.link}
+                                className="w-full py-3 rounded-lg font-bold text-slate-950 text-sm transition-all hover:bg-brand-primary active:scale-95 shadow-lg flex items-center justify-center"
                                 style={{ backgroundColor: plan.color }}
                             >
                                 {plan.cta}
-                            </button>
+                            </a>
                         </motion.div>
                     ))}
                 </div>

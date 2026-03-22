@@ -48,7 +48,7 @@ const SecurityPolicy = () => {
                             <div className="pb-8">
                                 <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">1. Introduction & Scope</h3>
                                 <div className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium space-y-4">
-                                    <p>QuantumVault is an India-based Post-Quantum Cryptography (PQC) platform delivering NIST FIPS 203-compliant cryptographic APIs, Hardware Security Module (HSM) key generation, Quantum Scanner diagnostics, and a developer-first SaaS ecosystem. This Security Policy governs all QuantumVault products, infrastructure, personnel, and third-party integrations.</p>
+                                    <p>QuantumVault is an India-based Post-Quantum Cryptography (PQC) platform delivering Post-Quantum Cryptography (PQC) APIs aligned with the NIST Post-Quantum Cryptography standardization process, including ML-KEM (FIPS 203 draft) and ML-DSA (FIPS 204 draft). Hardware Security Module (HSM) key generation, Quantum Scanner diagnostics, and a developer-first SaaS ecosystem. This Security Policy governs all QuantumVault products, infrastructure, personnel, and third-party integrations.</p>
                                     <p>This policy applies to:</p>
                                     <ul className="list-disc pl-6 space-y-2">
                                         <li>All tiers of the QuantumVault platform: Free, Starter, Professional, and Enterprise</li>
@@ -189,7 +189,7 @@ const SecurityPolicy = () => {
                                             </tbody>
                                         </table>
                                     </div>
-                                    <p className="mt-4">Algorithms deprecated by NIST (RSA &lt; 4096, ECDSA P-256 standalone, MD5, SHA-1) are rejected at the API gateway with a 400-series error and audit log entry.</p>
+                                    <p className="mt-4">Algorithms considered quantum-vulnerable or discouraged for long-term protection (e.g., RSA-2048/3072, ECDSA P-256, MD5, SHA-1) are rejected by the QuantumVault API gateway for security reasons and logged for audit review.</p>
 
                                     <h4 className="font-bold text-slate-900 dark:text-white">3.2 Key Management</h4>
                                     <ul className="list-disc pl-6 space-y-2">
@@ -201,7 +201,7 @@ const SecurityPolicy = () => {
                                     </ul>
 
                                     <h4 className="font-bold text-slate-900 dark:text-white">3.3 Hybrid Cryptography Transition</h4>
-                                    <p>Recognizing that many enterprise clients operate in mixed classical/post-quantum environments, QuantumVault supports hybrid modes combining classical (X25519, P-384) with PQC algorithms. Hybrid mode is available exclusively on the Enterprise tier and is governed by a separately issued Hybrid Transition Policy addendum. This is a direct response to the cryptographic agility gap observed in hardware-only competitors.</p>
+                                    <p>Recognizing that many enterprise clients operate in mixed classical/post-quantum environments, QuantumVault supports Hybrid: X25519 + ML-KEM — Hybrid post-quantum transition mode based on NIST PQC migration guidance. Hybrid mode is available exclusively on the Enterprise tier and is governed by a separately issued Hybrid Transition Policy addendum. This is a direct response to the cryptographic agility gap observed in hardware-only competitors.</p>
                                 </div>
                             </div>
 
@@ -337,7 +337,7 @@ const SecurityPolicy = () => {
                                 <div className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed font-medium space-y-4">
                                     <h4 className="font-bold text-slate-900 dark:text-white">6.1 Cloud Infrastructure</h4>
                                     <ul className="list-disc pl-6 space-y-2">
-                                        <li>Production infrastructure is hosted on FIPS 140-2 validated cloud instances with hardened OS images (CIS Benchmark Level 2).</li>
+                                        <li>Production infrastructure is hosted on hardened cloud environments using FIPS-validated cryptographic modules and security-hardened operating system images aligned with CIS Benchmarks Level 2.</li>
                                         <li>All production and staging environments are network-segmented; the production environment has no direct internet ingress except through the API gateway and CDN.</li>
                                         <li>Infrastructure-as-Code (IaC) is used for all provisioning; manual console access to production is prohibited except under emergency break-glass procedures with dual approval and full audit logging.</li>
                                     </ul>

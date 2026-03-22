@@ -201,11 +201,21 @@ const CTASection = ({ type }) => {
                         Start developing with post-quantum cryptography today. Free software-based APIs, no credit card required.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <button className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center space-x-2 transition-all hover:bg-brand-primary active:scale-95 shadow-lg shadow-brand-primary/20" style={{ backgroundColor: 'var(--color-brand-primary)' }}>
+                        <a 
+                            href="https://app.quantumvault.tech"
+                            className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center space-x-2 transition-all hover:bg-brand-primary active:scale-95 shadow-lg shadow-brand-primary/20" 
+                            style={{ backgroundColor: 'var(--color-brand-primary)' }}
+                        >
                             <span>Start Free Trial</span>
                             <ArrowRight size={18} />
-                        </button>
-                        <a href="#contact" className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center transition-all hover:bg-brand-accent active:scale-95 shadow-lg shadow-brand-accent/20" style={{ backgroundColor: 'var(--color-brand-accent)' }}>
+                        </a>
+                        <a 
+                            href="https://calendly.com/rahul-securedapp/quantum-vault-demo-call?month=2026-03" 
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-full sm:w-auto px-8 py-3 rounded-xl font-bold text-slate-950 flex items-center justify-center transition-all hover:bg-brand-accent active:scale-95 shadow-lg shadow-brand-accent/20" 
+                            style={{ backgroundColor: 'var(--color-brand-accent)' }}
+                        >
                             <span>Schedule a Demo</span>
                         </a>
                     </div>
