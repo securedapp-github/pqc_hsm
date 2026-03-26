@@ -28,6 +28,15 @@ const Navbar = () => {
             }`}>
             <div className="max-w-9xl mx-auto px-4 md:px-10">
                 <div className="flex justify-between items-center h-16">
+                    <div className="flex-1 flex md:hidden items-center">
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="p-2 text-slate-600 dark:text-slate-300 -ml-2"
+                        >
+                            {isOpen ? <X size={28} /> : <Menu size={28} />}
+                        </button>
+                    </div>
+
                     <Link
                         to="/"
                         onClick={() => {
@@ -35,14 +44,16 @@ const Navbar = () => {
                                 window.scrollTo({ top: 0, behavior: 'smooth' });
                             }
                         }}
-                        className="flex items-center group cursor-pointer"
+                        className="flex items-center group cursor-pointer absolute left-1/2 -translate-x-1/2 md:relative md:left-0 md:translate-x-0"
                     >
                         <img
                             src={theme === 'dark' ? '/img/3.png' : '/img/4.png'}
                             alt="QuantumVault Logo"
-                            className="h-40 w-auto object-contain"
+                            className="h-32 md:h-40 w-auto object-contain"
                         />
                     </Link>
+
+                    <div className="flex-1 md:hidden" /> {/* Spacer for right side on mobile */}
 
                     <div className="hidden md:flex items-center space-x-8">
                         {['Features', 'Pricing', 'Compliance', 'Contact'].map((item) => (
@@ -63,15 +74,6 @@ const Navbar = () => {
                         </a>
                     </div>
 
-                    <div className="md:hidden flex items-center space-x-4">
-                        <ThemeToggle />
-                        <button
-                            onClick={() => setIsOpen(!isOpen)}
-                            className="p-2 text-slate-600 dark:text-slate-300"
-                        >
-                            {isOpen ? <X size={28} /> : <Menu size={28} />}
-                        </button>
-                    </div>
                 </div>
 
                 {/* Mobile Menu */}
@@ -84,20 +86,24 @@ const Navbar = () => {
                             className="md:hidden border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-950 overflow-hidden"
                         >
                             <div className="py-4 space-y-1">
+                                <div className="px-6 py-2 flex items-center justify-between border-b border-slate-100 dark:border-slate-800 mb-2 pb-4">
+                                    <span className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Settings</span>
+                                    <ThemeToggle />
+                                </div>
                                 {['Features', 'Pricing', 'Compliance', 'Contact'].map((item) => (
                                     <a
                                         key={item}
                                         href={`/#${item.toLowerCase()}`}
-                                        className="block px-6 py-4 text-lg font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-4 border-transparent hover:border-brand-primary transition-all"
+                                        className="block px-6 py-3 text-sm font-bold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-900 border-l-4 border-transparent hover:border-brand-primary transition-all"
                                         onClick={() => setIsOpen(false)}
                                     >
                                         {item}
                                     </a>
                                 ))}
-                                <div className="px-4 py-4">
+                                <div className="px-4 py-4 mt-2">
                                     <a
                                         href="https://app.quantumvault.tech"
-                                        className="w-full bg-brand-primary text-slate-950 py-3 rounded-lg font-bold shadow-lg flex items-center justify-center hover:bg-brand-accent transition-all"
+                                        className="w-full bg-brand-primary text-slate-950 py-3 rounded-lg font-bold shadow-lg flex items-center justify-center hover:bg-brand-accent transition-all text-sm"
                                     >
                                         Get Started
                                     </a>
