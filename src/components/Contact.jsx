@@ -104,7 +104,7 @@ const Contact = () => {
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">
                             Get In Touch
                         </h2>
-                        <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
+                        <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg max-w-2xl mx-auto">
                             Have questions about the quantum transition? Our security experts are here to help you future-proof your infrastructure.
                         </p>
                     </div>

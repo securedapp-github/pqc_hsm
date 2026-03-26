@@ -10,11 +10,11 @@ const HybridCrypto = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight"
+                        className="text-3xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight"
                     >
                         Hybrid <span className="text-gradient">Cryptography</span>
                     </motion.h2>
-                    <p className="text-slate-500 dark:text-slate-400 font-medium text-lg leading-relaxed">
+                    <p className="text-slate-500 dark:text-slate-400 font-medium text-base md:text-lg leading-relaxed">
                         Ensuring quantum-safe security today while maintaining seamless compatibility with legacy classical systems.
                     </p>
                 </div>
@@ -23,9 +23,9 @@ const HybridCrypto = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="rounded-[1rem] p-10 md:p-16 text-center bg-blue-100 dark:bg-blue-900/30 transition-colors duration-300"
+                    className="rounded-[1rem] p-8 md:p-16 text-center bg-blue-100 dark:bg-blue-900/30 transition-colors duration-300"
                 >
-                    <h3 className="text-3xl md:text-4xl font-bold mb-2 text-slate-900 dark:text-white">Hybrid Cryptography</h3>
+                    <h3 className="text-2xl md:text-4xl font-bold mb-2 text-slate-900 dark:text-white">Hybrid Cryptography</h3>
                     <p className="text-slate-600 dark:text-slate-300 text-sm mb-12">Classical + Post-Quantum Crypto</p>
 
                     <div className="grid md:grid-cols-2 gap-8 mb-12">

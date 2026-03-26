@@ -26,7 +26,7 @@ const Navbar = () => {
             ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-md border-slate-200 dark:border-slate-700/60'
             : 'bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm border-slate-200/50 dark:border-slate-700/30'
             }`}>
-            <div className="max-w-9xl mx-auto px-10">
+            <div className="max-w-9xl mx-auto px-4 md:px-10">
                 <div className="flex justify-between items-center h-16">
                     <Link
                         to="/"

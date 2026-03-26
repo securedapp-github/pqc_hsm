@@ -77,23 +77,23 @@ const SecurityModel = () => {
         <section id="features" className="py-20 md:py-32 px-4 relative overflow-hidden">
             <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-24">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight"
-                    >
-                        Enterprise <span className="text-gradient">Security Model</span>
-                    </motion.h2>
-                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium text-lg mb-4">
-                        A defense-in-depth architecture designed for the most demanding security requirements.
-                    </p>
-                    <div className="inline-block glass px-4 py-2 rounded-xl text-xs font-bold text-slate-500 uppercase tracking-widest">
-                        Zero-Trust Architecture
-                    </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+                     <motion.h2
+                         initial={{ opacity: 0, y: 20 }}
+                         whileInView={{ opacity: 1, y: 0 }}
+                         viewport={{ once: true }}
+                         className="text-3xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight"
+                     >
+                         Enterprise <span className="text-gradient">Security Model</span>
+                     </motion.h2>
+                     <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium text-base md:text-lg mb-4">
+                         A defense-in-depth architecture designed for the most demanding security requirements.
+                     </p>
+                     <div className="inline-block glass px-4 py-2 rounded-xl text-[10px] md:text-xs font-bold text-slate-500 uppercase tracking-widest">
+                         Zero-Trust Architecture
+                     </div>
+                 </div>
+ 
+                 <div className="flex flex-nowrap lg:grid lg:grid-cols-3 overflow-x-auto lg:overflow-x-visible pb-12 lg:pb-0 gap-8 items-stretch snap-x snap-mandatory no-scrollbar -mx-4 px-4 lg:mx-0 lg:px-0">
                     {features.map((f, i) => {
                         const isExpanded = expandedIndex === i;
                         const isOtherExpanded = expandedIndex !== null && !isExpanded;
@@ -114,7 +114,7 @@ const SecurityModel = () => {
                                     opacity: isOtherExpanded ? 0.7 : 1,
                                     zIndex: isExpanded ? 10 : 1
                                 }}
-                                className={`glass rounded-[2rem] p-8 transition-all duration-500 group relative flex flex-col ${isExpanded
+                                 className={`min-w-[85vw] md:min-w-0 md:w-full lg:w-full h-full glass rounded-[2rem] p-8 transition-all duration-500 group relative flex flex-col snap-center ${isExpanded
                                     ? 'bg-white dark:bg-slate-900 border-brand-primary/30 dark:border-brand-primary/20 shadow-2xl shadow-brand-primary/10'
                                     : 'hover:bg-white/50 dark:hover:bg-slate-900/50'
                                     }`}
@@ -157,13 +157,13 @@ const SecurityModel = () => {
                                     )}
                                 </AnimatePresence>
 
-                                <button
-                                    onClick={() => setExpandedIndex(isExpanded ? null : i)}
-                                    className={`flex items-center justify-center md:justify-start gap-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${isExpanded
-                                        ? 'text-brand-accent dark:text-brand-primary'
-                                        : 'text-slate-400 hover:text-brand-accent dark:hover:text-brand-primary'
-                                        }`}
-                                >
+                                 <button
+                                     onClick={() => setExpandedIndex(isExpanded ? null : i)}
+                                     className={`mt-auto flex items-center justify-center md:justify-start gap-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 ${isExpanded
+                                         ? 'text-brand-accent dark:text-brand-primary'
+                                         : 'text-slate-400 hover:text-brand-accent dark:hover:text-brand-primary'
+                                         }`}
+                                 >
                                     {isExpanded ? (
                                         <>Read Less <ChevronUp size={14} /></>
                                     ) : (

@@ -29,19 +29,19 @@ const Compliance = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight text-center"
+                        className="text-3xl md:text-5xl font-bold text-balance leading-tight mb-6 tracking-tight text-center"
                     >
                         Compliance <span className="text-gradient">& Audit</span>
                     </motion.h2>
-                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium text-lg mb-6">
+                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto font-medium text-base md:text-lg mb-6 text-center">
                         Engineered for regulated industries where security is non-negotiable.
                     </p>
-                    <p className="text-xs font-bold text-slate-400 uppercase tracking-widest max-w-xl mx-auto leading-relaxed">
+                    <p className="text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest max-w-xl mx-auto leading-relaxed text-center">
                         Supporting ISO 27001, SOC 2 Type II, PCI DSS v4.0, and GDPR Compliance.
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex flex-nowrap md:grid md:grid-cols-3 overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 gap-8 snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0">
                     {items.map((item, i) => (
                         <motion.div
                             key={i}
@@ -49,7 +49,7 @@ const Compliance = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="glass rounded-3xl p-10 flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
+                            className="min-w-[280px] w-[280px] md:w-full glass rounded-3xl p-10 flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500 snap-center"
                         >
                             <div className="w-20 h-20 rounded-full bg-brand-primary/10 dark:bg-brand-primary/5 flex items-center justify-center mb-8 border border-brand-primary/20 dark:border-brand-primary/10 group-hover:scale-110 transition-transform duration-500">
                                 <item.icon className="text-brand-accent dark:text-brand-primary" size={32} />

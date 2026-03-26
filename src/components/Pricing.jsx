@@ -66,16 +66,16 @@ const Pricing = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight"
+                        className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight"
                     >
                         Pricing
                     </motion.h2>
-                    <p className="text-slate-500 dark:text-slate-400 font-medium text-lg">
+                    <p className="text-slate-500 dark:text-slate-400 font-medium text-base md:text-lg">
                         Choose the plan that fits your security needs
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+                <div className="flex flex-nowrap lg:grid lg:grid-cols-3 overflow-x-auto lg:overflow-x-visible pb-8 lg:pb-0 gap-6 items-stretch snap-x snap-mandatory no-scrollbar -mx-4 px-4 lg:mx-0 lg:px-0">
                     {plans.map((plan, i) => (
                         <motion.div
                             key={i}
@@ -83,7 +83,7 @@ const Pricing = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className={`flex flex-col p-10 rounded-xl border transition-all duration-300 ${plan.highlight
+                            className={`min-w-[85vw] md:w-full lg:w-full md:min-w-0 glass rounded-[2rem] p-8 transition-all duration-500 group relative flex flex-col snap-center h-full ${plan.highlight
                                 ? 'bg-white dark:bg-slate-900/40 border-brand-primary ring-1 ring-brand-primary/20'
                                 : 'bg-white dark:bg-slate-900/40 border-slate-200 dark:border-slate-800 shadow-sm'
                                 }`}
@@ -116,7 +116,7 @@ const Pricing = () => {
 
                             <a
                                 href={plan.link}
-                                className="w-full py-3 rounded-lg font-bold text-slate-950 text-sm transition-all hover:bg-brand-primary active:scale-95 shadow-lg flex items-center justify-center"
+                                className="w-full py-3 rounded-lg font-bold text-slate-950 text-sm transition-all hover:bg-brand-primary active:scale-95 shadow-lg flex items-center justify-center mt-auto"
                                 style={{ backgroundColor: plan.color }}
                             >
                                 {plan.cta}

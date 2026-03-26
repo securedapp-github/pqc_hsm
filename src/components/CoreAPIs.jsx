@@ -29,7 +29,7 @@ const CoreAPIs = () => {
     return (
         <section id="resources" className="py-20 md:py-24 px-4 relative bg-slate-50/50 dark:bg-slate-950/50">
             <div className="max-w-7xl mx-auto">
-                <div className="grid md:grid-cols-2 gap-8 mb-16">
+                <div className="flex flex-nowrap md:grid md:grid-cols-2 overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 gap-8 mb-16 snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 items-stretch">
                     {apis.map((api, i) => (
                         <motion.div
                             key={i}
@@ -37,7 +37,7 @@ const CoreAPIs = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="bg-white dark:bg-slate-900/40 rounded-[2rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300"
+                            className="min-w-[85vw] md:min-w-0 md:w-full bg-white dark:bg-slate-900/40 rounded-[2rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md transition-all duration-300 snap-center h-full"
                         >
                             <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-4 mb-4 text-center md:text-left">
                                 <api.icon className="text-brand-accent dark:text-brand-primary mb-4 md:mb-0" size={32} />

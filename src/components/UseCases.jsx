@@ -49,16 +49,16 @@ const UseCases = () => {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900 dark:text-white"
+                        className="text-3xl md:text-5xl font-bold mb-6 tracking-tight text-slate-900 dark:text-white"
                     >
                         Industry <span className="text-gradient">Use Cases</span>
                     </motion.h2>
-                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                    <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-base md:text-lg">
                         Securing mission-critical data across the most sensitive sectors.
                     </p>
                 </div>
-
-                <div className="flex flex-wrap justify-center gap-8">
+ 
+                <div className="flex flex-nowrap md:flex-wrap overflow-x-auto md:overflow-x-visible pb-8 md:pb-0 gap-6 snap-x snap-mandatory no-scrollbar -mx-4 px-4 md:mx-0 md:px-0 md:justify-center items-stretch">
                     {cases.map((useCase, i) => (
                         <motion.div
                             key={i}
@@ -66,7 +66,7 @@ const UseCases = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.1 }}
-                            className="w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] p-8 rounded-3xl glass border-slate-200/50 dark:border-slate-800/50 shadow-xl shadow-brand-primary/5 hover:shadow-2xl hover:shadow-brand-primary/10 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 group"
+                            className="min-w-[80vw] md:min-w-0 md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-2rem)] p-8 rounded-3xl glass border-slate-200/50 dark:border-slate-800/50 shadow-xl shadow-brand-primary/5 hover:shadow-2xl hover:shadow-brand-primary/10 hover:bg-white dark:hover:bg-slate-900 transition-all duration-300 group snap-center h-full"
                         >
                             <div className={`w-14 h-14 bg-brand-primary/10 dark:bg-brand-primary/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                                 <useCase.icon className="text-brand-accent dark:text-brand-primary" size={28} />

@@ -24,7 +24,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-4xl sm:text-6xl md:text-7xl font-bold text-balance leading-tight text-slate-900 dark:text-white"
+                        className="text-3xl sm:text-5xl md:text-7xl font-bold text-balance leading-tight text-slate-900 dark:text-white"
                     >
                         Quantum-Safe Security <br />
                         <span className="text-gradient">Built for Tomorrow</span>
@@ -34,7 +34,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-lg md:text-2xl text-slate-500 dark:text-slate-400 mb-14 max-w-2xl mx-auto font-medium"
+                        className="text-base md:text-xl text-slate-500 dark:text-slate-400 mb-14 max-w-2xl mx-auto font-medium"
                     >
                         HSM-backed, NIST-aligned quantum-safe cryptography APIs built to protect your data against future quantum threats.
                     </motion.p>
