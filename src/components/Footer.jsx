@@ -10,8 +10,8 @@ const Footer = () => {
         <footer className="bg-slate-100 dark:bg-slate-900/40 pt-16 pb-12 px-6 border-t border-slate-200 dark:border-slate-800 transition-colors duration-500">
             <div className="max-w-9xl mx-auto">
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-10 mb-12">
-                    {/* Brand Section - Hidden on mobile, shown on desktop */}
-                    <div className="hidden md:flex col-span-1 sm:col-span-2 lg:col-span-7 flex-col items-center md:items-start text-center md:text-left">
+                    {/* Brand Section */}
+                    <div className="col-span-2 md:col-span-4 lg:col-span-7 flex flex-col items-center md:items-start text-center md:text-left mb-8 md:mb-0">
                         <Link to="/" className="flex items-center space-x-3 mb-4 group cursor-pointer">
                             <img
                                 src={theme === 'dark' ? "img/2.png" : "img/1.png"}
@@ -24,8 +24,8 @@ const Footer = () => {
                             Post-quantum cryptography as a service. Built for the quantum era.
                         </p>
 
-                        {/* Social Media Icons (Desktop) */}
-                        <div className="flex items-center gap-3 mt-6">
+                        {/* Social Media Icons (Desktop only inside brand section) */}
+                        <div className="hidden md:flex items-center gap-3 mt-6">
                             <SocialIcons />
                         </div>
                     </div>
