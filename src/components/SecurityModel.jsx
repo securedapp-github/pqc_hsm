@@ -175,8 +175,7 @@ const SecurityModel = () => {
                     })}
                 </div>
 
-                <p className="text-center mt-24 text-sm font-bold text-slate-400 flex items-center justify-center gap-2">
-                    <Shield size={14} />
+                <p className="text-center mt-8 md:mt-24 text-sm font-bold text-slate-400 flex items-center justify-center gap-2">
                     Shared Responsibility Model: Customer manages application-level data.
                 </p>
             </div>
