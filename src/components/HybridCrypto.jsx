@@ -23,7 +23,7 @@ const HybridCrypto = () => {
                     initial={{ opacity: 0, scale: 0.95 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    className="rounded-[1rem] p-8 md:p-16 text-center bg-blue-100 dark:bg-blue-900/30 transition-colors duration-300"
+                    className="glass rounded-[2rem] p-8 md:p-16 text-center transition-colors duration-300"
                 >
                     <h3 className="text-2xl md:text-4xl font-bold mb-2 text-slate-900 dark:text-white">Hybrid Cryptography</h3>
                     <p className="text-slate-600 dark:text-slate-300 text-sm mb-12">Classical + Post-Quantum Crypto</p>
@@ -35,7 +35,7 @@ const HybridCrypto = () => {
                         ].map((tech, i) => (
                             <div
                                 key={i}
-                                className="bg-white dark:bg-slate-800 p-8 rounded-[1rem] shadow-sm flex items-center justify-center transition-colors duration-300 border border-slate-100 dark:border-slate-700"
+                                className="bg-slate-50 dark:bg-slate-900/50 p-8 rounded-[1.5rem] shadow-sm flex items-center justify-center transition-colors duration-300 border border-slate-100 dark:border-slate-800"
                             >
                                 <span className="text-xl md:text-2xl font-medium text-slate-900 dark:text-white">{tech}</span>
                             </div>

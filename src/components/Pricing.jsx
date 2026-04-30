@@ -36,7 +36,7 @@ const Pricing = () => {
             ],
             cta: "Get Started",
             link: "https://app.quantumvault.tech",
-            color: "var(--color-brand-accent)",
+            color: "var(--color-brand-primary)",
             highlight: true
         },
         {
